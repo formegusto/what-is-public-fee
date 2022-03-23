@@ -46,7 +46,7 @@ def get_analysis_df(_month, month_df, APT):
         households_pd = households_pd.append(
             pd.Series({
                 "기본요금": household.basic,
-                "전력량요금": household.elec_rate - household.guarantee,
+                "전력량요금": household.elec_rate,
                 "환경 기후금": household.env,
                 "연료비 조정액": household.fuel * -1,
                 'VAT': int(household.vat),
