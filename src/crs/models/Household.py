@@ -8,6 +8,7 @@ class Household:
     vat = vat
     fund = fund
     elec_bill_vat_fund = elec_bill_vat_fund
+    step_elec_rate = list()
 
     def __init__(self,
                  name, kwh, contract, contract_name):
@@ -34,24 +35,29 @@ class Household:
     @property
     def elec_rate(self):
         kwh = self.kwh
-        step = 0
 
+        step = 0
         fee = 0
         for idx, _ in enumerate(self.contract):
+
             if (kwh + step) <= _[1]:
-                fee += (kwh * _[3])
+                _fee = (kwh * _[3])
+                fee += _fee
+
                 break
             else:
                 next_step = _[1]
                 if idx == 0:
                     kwh -= _[1]
                     step += _[1]
+                    _fee = (step * _[3])
                 else:
                     prev = self.contract[idx-1]
                     next_step = (_[1] - prev[1])
                     kwh -= next_step
                     step += next_step
-                fee += (next_step * _[3])
+                    _fee = (next_step * _[3])
+                fee += _fee
 
         return mt.floor(fee)
 

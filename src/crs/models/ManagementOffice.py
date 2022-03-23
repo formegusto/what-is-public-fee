@@ -74,10 +74,10 @@ class ManagementOffice:
             env = self.apart.env * num_household
             fuel = self.apart.fuel * num_household
 
-            elec_bill = basic + elec_rate + env - fuel
-            self.bill = mt.floor((elec_bill
-                                  + round(elec_bill * 0.1)
-                                  + mt.floor(elec_bill * 0.037 * 0.1) * 10) * 0.1) * 10
+            self.elec_bill = basic + elec_rate + env - fuel
+            self.bill = mt.floor((self.elec_bill
+                                  + round(self.elec_bill * 0.1)
+                                  + mt.floor(self.elec_bill * 0.037 * 0.1) * 10) * 0.1) * 10
 
             # 가구 객체화
             # - 가구별 지정된 계약에 요금들이 계산되도록 Property 구성해놨음.
