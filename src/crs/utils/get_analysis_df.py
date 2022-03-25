@@ -14,13 +14,13 @@ def get_analysis_df(_month, month_df, APT):
     apt = calc.apart
 
     apt_pd = pd.DataFrame(
-        columns=['기본요금', '전력량요금', '환경 기후금', '연료비 조정액', 'VAT', '전력산업기반기금', '기본요금 + 전력량요금'])
+        columns=['기본요금', '전력량요금', '기후환경요금', '연료비 조정액', 'VAT', '전력산업기반기금', '기본요금 + 전력량요금'])
 
     apt_pd = apt_pd.append(
         pd.Series({
             "기본요금": apt.basic,
             "전력량요금": apt.elec_rate,
-            "환경 기후금": apt.env,
+            "기후환경요금": apt.env,
             "연료비 조정액": apt.fuel * -1,
             'VAT': round(calc.elec_bill * 0.1 / len(month_df)),
             '전력산업기반기금': "x",
@@ -30,7 +30,7 @@ def get_analysis_df(_month, month_df, APT):
         pd.Series({
             "기본요금": apt.basic * len(month_df),
             "전력량요금": apt.elec_rate * len(month_df),
-            "환경 기후금": apt.env * len(month_df),
+            "기후환경요금": apt.env * len(month_df),
             "연료비 조정액": apt.fuel * len(month_df) * -1,
             'VAT': round(calc.elec_bill * 0.1),
             '전력산업기반기금': round(mt.floor(calc.elec_bill * 0.037 * 0.1) * 10),
@@ -40,14 +40,14 @@ def get_analysis_df(_month, month_df, APT):
     households = calc.households
 
     households_pd = pd.DataFrame(
-        columns=['기본요금', '전력량요금', '환경 기후금', '연료비 조정액', 'VAT', '전력산업기반기금', '기본요금 + 전력량요금'])
+        columns=['기본요금', '전력량요금', '기후환경요금', '연료비 조정액', 'VAT', '전력산업기반기금', '기본요금 + 전력량요금'])
 
     for household in households:
         households_pd = households_pd.append(
             pd.Series({
                 "기본요금": household.basic,
                 "전력량요금": household.elec_rate,
-                "환경 기후금": household.env,
+                "기후환경요금": household.env,
                 "연료비 조정액": household.fuel * -1,
                 'VAT': int(household.vat),
                 '전력산업기반기금': int(household.fund),
