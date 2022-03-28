@@ -93,10 +93,10 @@ class ManagementOffice:
                 )
 
             # 공공설비사용요금
-            households_bill = sum(
+            self.households_bill = sum(
                 [_.elec_bill_vat_fund for _ in self.households]
             )
-            self.public_bill = self.bill - households_bill
+            self.public_bill = self.bill - self.households_bill
 
             # 가구별 청구서 셋팅
             public_fee = round(self.public_bill / len(self.households))
