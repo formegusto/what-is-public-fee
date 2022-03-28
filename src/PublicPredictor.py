@@ -73,9 +73,12 @@ class PublicPredictor:
             else:
                 min_kWh += 1
         self.min_kWh = min_kWh
+
+        self._month_df = month_df.copy()
         self.min_households = month_df[month_df['usage (kWh)'] <= min_kWh].copy(
         )
         self.month_df = month_df[month_df['usage (kWh)'] > min_kWh].copy()
+
         self.households_kWh = self.month_df['usage (kWh)'].sum()
 
         self.min_pay = 1000 * len(self.min_households)
@@ -130,9 +133,11 @@ class PublicPredictor:
 
         elec_rate = round((public_col_list * np.array(self.fee)
                           [:, 3] * self.households_count).sum())
+
         self.elec_rate = elec_rate + start_elec_rate
 
     # 기후환경요금, 연료비조정액, 필수사용량보장공제
+
     def setting_rest(self):
         self.env = round((self.APT - self.households_kWh) * 5.3)
         self.fuel = round((self.APT - self.households_kWh) * 3)

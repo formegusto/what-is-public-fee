@@ -109,9 +109,11 @@ class PublicPredictor:
 
         elec_rate = round((public_col_list * np.array(self.fee)
                           [:, 3] * self.households_count).sum())
+
         self.elec_rate = elec_rate + start_elec_rate
 
     # 기후환경요금, 연료비조정액, 필수사용량보장공제
+
     def setting_rest(self):
         self.env = round((self.APT - self.households_kWh) * 5.3)
         self.fuel = round((self.APT - self.households_kWh) * 3)
