@@ -124,6 +124,7 @@ class PublicPredictor:
         # 공용부 전력량 요금 시작 요금 산출
         start_elec_rate = round(
             (err_households_col_list * np.array(self.fee)[:, 3]).sum())
+        self.start_elec_rate = start_elec_rate
 
         # 2. 공용부 시작 누진단계 산출
         apt_col_list = get_col_list(self.APT_mean, self.fee)
@@ -137,7 +138,6 @@ class PublicPredictor:
         self.elec_rate = elec_rate + start_elec_rate
 
     # 기후환경요금, 연료비조정액, 필수사용량보장공제
-
     def setting_rest(self):
         self.env = round((self.APT - self.households_kWh) * 5.3)
         self.fuel = round((self.APT - self.households_kWh) * 3)
