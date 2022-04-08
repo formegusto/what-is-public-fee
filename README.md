@@ -4,11 +4,11 @@
 
 > **한국전력공사(KEPCO)의 전기요금표 21.01.01을 기준으로 작성되었습니다.**
 
-![Untitled](what%20is%20pu%20c0251/Untitled.png)
+![Untitled](https://user-images.githubusercontent.com/52296323/162350260-657d6301-ea44-4339-990e-93a4d03760e0.png)
 
 **전기요금의 기본구조**는 **기본요금, 전력량요금, 기후환경요금, 연료비조정요금**으로 구성이 되어 있다.
 
-![Untitled](what%20is%20pu%20c0251/Untitled%201.png)
+![Untitled 1](https://user-images.githubusercontent.com/52296323/162350266-9ee3b240-071f-458c-9f3a-4231e6d1e2ec.png)
 
 전기요금은 구성요소들로 계산이 된 후, **최종적으로 부가가치세와 전력산업기반기금이 추가**되어 **최종청구금액이 산정**된다.
 
@@ -29,21 +29,21 @@
 
 ## 순수 공용부 사용량에 대한 산정으로 구성되는 종합계약의 공용부 요금
 
-![일반용전력(갑) 1 요금표](what%20is%20pu%20c0251/Untitled%202.png)
+![Untitled 2](https://user-images.githubusercontent.com/52296323/162350275-d3418d95-140a-4b7b-aff4-43b3ae992630.png)
 
 일반용전력(갑) 1 요금표
 
-![Untitled](what%20is%20pu%20c0251/Untitled%203.png)
+![Untitled 3](https://user-images.githubusercontent.com/52296323/162350281-57bf3f42-4336-49fe-82c7-b1f10e4fad02.png)
 
 **종합계약**은 위 요금표를 참고하여, **공용부를 전기요금 구성요소로 뚜렷하게 나타낼 수가 있다.** 즉, 순수 공용부 사용량에 대한 요금계산이 이루어진다는 것 이다. **_eq.공용부 요금의 투명성이 보장된다._**
 
 ## 단일계약의 공용부 요금
 
-![주택용전력(고압) 요금표](what%20is%20pu%20c0251/Untitled%204.png)
+![Untitled 4](https://user-images.githubusercontent.com/52296323/162350288-5e717104-4031-44ca-9ce9-c87ec076846f.png)
 
 주택용전력(고압) 요금표
 
-![Untitled](what%20is%20pu%20c0251/Untitled%205.png)
+![Untitled 5](https://user-images.githubusercontent.com/52296323/162350294-6a9fccfa-19ad-441d-bf55-d2a8bdf0e5d4.png)
 
 **단일계약의 공용부 요금**은 **아파트 전체 사용요금에서 세대부의 가구들이 수거해 간 요금의 나머지**이기 때문에 **순수 공용부 사용량에 대한 산정이라고 보기는 어렵다.**
 
