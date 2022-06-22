@@ -2,7 +2,6 @@
 
 > Notion Table of contents
 
-<<<<<<< HEAD
 | Title                           | Link                                                                                     |
 | ------------------------------- | ---------------------------------------------------------------------------------------- |
 | 개요                            | https://elegant-tern-afc.notion.site/what-is-public-fee-76668fbd36224378ba1fca6a1df60bd2 |
@@ -10,15 +9,6 @@
 | 공용부 전기요금 예측 시뮬레이션 | https://elegant-tern-afc.notion.site/pt2-5495af6abb6544948ed43a905d53ab8a                |
 | 세대부의 전기절약과 공용부 요금 | https://elegant-tern-afc.notion.site/pt3-f91dd289f1ac4a4dba41f4cbd6312042                |
 | 형평성 문제                     | https://elegant-tern-afc.notion.site/pt4-1c1271001d2143c48c2c9ac5a42e224f                |
-=======
-| Title                           | Link                                                   |
-| ------------------------------- | ------------------------------------------------------ |
-| 개요                            | https://github.com/formegusto/what-is-public-fee |
-| 공용부의 전기요금 구성요소      | https://www.notion.so/f3f0b54cf6af40da84bb70e832949686 |
-| 공용부 전기요금 예측 시뮬레이션 | https://www.notion.so/5495af6abb6544948ed43a905d53ab8a |
-| 세대부의 전기절약과 공용부 요금 | https://www.notion.so/f91dd289f1ac4a4dba41f4cbd6312042 |
-| 형평성 문제                     | https://www.notion.so/1c1271001d2143c48c2c9ac5a42e224f |
->>>>>>> 58a29d483418fb010c53c1b784f833d478a269fc
 
 # 전기요금의 기본구성 요소
 
