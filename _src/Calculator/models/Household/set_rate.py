@@ -1,8 +1,10 @@
 import numpy as np
-from ..common.rate import BASIC, ELEC, STEP_LIMITS_HOUSEHOLD
+from ...common.rate import BASIC, ELEC, STEP_LIMITS_HOUSEHOLD
 
 
 def set_rate(self, contract, season):
+    self.contract = contract
+
     self.BASIC = BASIC[contract]
     self.ELEC = ELEC[contract]
 

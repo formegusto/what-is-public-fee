@@ -8,3 +8,5 @@ def set_households(self):
             row['name'], row['usage (kWh)']).set_rate(self.contract, self.season)
         households.append(household)
     self.households = households
+
+    return self
