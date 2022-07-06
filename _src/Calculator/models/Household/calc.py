@@ -35,9 +35,6 @@ def elec_bill(self):
 @property
 def guarantee(self):
     if self.kwh <= 200:
-        if self.contract == "종합":
-            return 4000
-        elif self.contract == "단일":
-            return 2500
+        return self.GUARANTEE
     else:
         return 0

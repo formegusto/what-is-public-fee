@@ -15,6 +15,11 @@ ELEC = dict({
 ENV = 5.3
 # 연료비조정액
 FUEL = -3
+# 필수사용량보장공제
+GUARANTEE = dict({
+    "단일": 2500,
+    "종합": 4000
+})
 
 # 분할 계산 설정 참고 VALUE
 STEP_LIMITS_HOUSEHOLD = dict({
