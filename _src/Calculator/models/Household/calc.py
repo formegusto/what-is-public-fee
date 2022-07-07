@@ -38,3 +38,18 @@ def guarantee(self):
         return self.GUARANTEE
     else:
         return 0
+
+
+@property
+def vat(self):
+    return round(self.elec_bill * 0.1)
+
+
+@property
+def fund(self):
+    return np.floor(self.elec_bill * 0.037 * 0.1) * 10
+
+
+@property
+def elec_bill_vat_fund(self):
+    return np.floor((self.elec_bill + self.vat + self.fund) * 0.1) * 10
