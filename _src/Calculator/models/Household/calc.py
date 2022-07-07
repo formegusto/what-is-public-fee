@@ -49,6 +49,8 @@ def vat(self):
 def fund(self):
     return np.floor(self.elec_bill * 0.037 * 0.1) * 10
 
+# 개인 사용량 요금 + 부가가치세 + 전력산업기반기금
+
 
 @property
 def elec_bill_vat_fund(self):

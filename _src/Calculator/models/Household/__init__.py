@@ -7,6 +7,17 @@ class Household:
         self.name = name
         self.kwh = kwh
 
+    def to_rate_dict(self, mul=1):
+        return {
+            "기본요금": self.basic * mul,
+            "전력량요금": self.elec_rate * mul,
+            "기후환경요금": self.env * mul,
+            "연료비조정액": self.fuel * mul,
+            "부가가치세": self.vat * mul,
+            "전력산업기반기금": self.fund * mul,
+            "최종청구금액": self.elec_bill_vat_fund * mul
+        }
+
 
 Household.set_rate = set_rate
 Household.basic = basic
