@@ -1,4 +1,5 @@
 from .Basic import Basic
+from .ElecRate import ElecRate
 from .BillTable import BillTable
 from .set_init import set_init
 from .set_calc import set_calc
@@ -11,6 +12,7 @@ class PublicAnalysis:
 
     def set(self):
         self.basic = Basic(analyzer=self)
+        self.elec_rate = ElecRate(analyzer=self)
 
     def set_bill_table(self, public_percentage=30):
         self.bill_table = BillTable(

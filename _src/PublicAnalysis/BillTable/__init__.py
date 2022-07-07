@@ -3,8 +3,8 @@ import pandas as pd
 
 
 class BillTable:
-    def __init__(self, analyzer, public_percentage=30):
-        analyzer.set_calc(public_percentage=public_percentage)
+    def __init__(self, analyzer, kwh=None, public_percentage=None):
+        analyzer.set_calc(kwh=kwh, public_percentage=public_percentage)
         self.analyzer = analyzer
 
     @property
