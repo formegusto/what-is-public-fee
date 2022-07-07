@@ -25,5 +25,7 @@ def set_rate(self, contract, season):
                 _kwh -= STEP_LIMITS[step]
         step += 1
     self.steps = steps
+    self.step_count = np.where(steps != 0)[0]
+    self.step_count = self.step_count[-1]
 
     return self
