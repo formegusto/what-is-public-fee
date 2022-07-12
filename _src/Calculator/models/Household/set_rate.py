@@ -26,6 +26,6 @@ def set_rate(self, contract, season):
         step += 1
     self.steps = steps
     self.step_count = np.where(steps != 0)[0]
-    self.step_count = self.step_count[-1]
+    self.step_count = 0 if self.step_count.size == 0 else self.step_count[-1]
 
     return self

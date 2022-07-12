@@ -157,7 +157,10 @@ class PublicPredictor:
             self.fuel + self.guarantee - self.min_pay
 
         vat = round(elec_bill * 0.1)
+        print(elec_bill)
+        print(vat)
         fund = mt.floor(elec_bill * 0.037 * 0.1) * 10
+        print(fund)
 
         elec_bill += vat + fund
         elec_bill = mt.floor(elec_bill * 0.1) * 10

@@ -5,7 +5,7 @@ from ...common.rate import ENV, FUEL
 @property
 def basic(self):
     _basics = self.BASIC[self.steps != 0]
-    return _basics.max()
+    return self.BASIC[0] if _basics.size == 0 else _basics.max()
 
 
 @property
